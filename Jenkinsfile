@@ -60,11 +60,17 @@ pipeline {
                  withSonarQubeEnv('sonar') {
       // requires SonarQube Scanner for Maven 3.2+
                      sh 'mvn clean package sonar:sonar'
-                }    
+                 }    
                   
-            }  
+            }
+        }     
+        stage('Junit Test') {
+            steps {
+                junit '**/*.xml'
+            }
+        }    
     
-        }
+      
         
     
     }
