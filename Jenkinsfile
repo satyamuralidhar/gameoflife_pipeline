@@ -36,7 +36,7 @@ pipeline {
                     url: "http://192.168.222.135:8081/artifactory/",
                     //credentialsId: JFROG
                     username: 'admin',
-                    password: '@murali5'
+                    password: '@MUrali5'
                 )
                  rtMavenDeployer (
                     id: "JFROG",
